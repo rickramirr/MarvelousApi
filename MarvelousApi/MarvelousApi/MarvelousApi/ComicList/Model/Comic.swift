@@ -58,6 +58,11 @@ struct ComicDate: Codable, Hashable {
 struct Image: Codable, Hashable {
     let path: String?
     let thumbnailExtension: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case path
+        case thumbnailExtension = "extension"
+    }
 }
 
 struct ComicPrice: Codable, Hashable {
