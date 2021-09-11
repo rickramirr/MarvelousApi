@@ -10,7 +10,6 @@
 		5E8319A926ED5EF200374725 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5E8319A826ED5EF200374725 /* SDWebImage */; };
 		5EB6289F26EC122B009AE8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6289E26EC122B009AE8FD /* AppDelegate.swift */; };
 		5EB628A126EC122B009AE8FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628A026EC122B009AE8FD /* SceneDelegate.swift */; };
-		5EB628A326EC122B009AE8FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628A226EC122B009AE8FD /* ViewController.swift */; };
 		5EB628A826EC122E009AE8FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB628A726EC122E009AE8FD /* Assets.xcassets */; };
 		5EB628AB26EC122E009AE8FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB628A926EC122E009AE8FD /* LaunchScreen.storyboard */; };
 		5EB628B626EC122F009AE8FD /* MarvelousApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628B526EC122F009AE8FD /* MarvelousApiTests.swift */; };
@@ -43,7 +42,6 @@
 		5EB6289B26EC122B009AE8FD /* MarvelousApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelousApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB6289E26EC122B009AE8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB628A026EC122B009AE8FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EB628A226EC122B009AE8FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EB628A726EC122E009AE8FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB628AA26EC122E009AE8FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EB628AC26EC122E009AE8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				5EB628CE26EC13F9009AE8FD /* MarvelousApi */,
 				5EB6289E26EC122B009AE8FD /* AppDelegate.swift */,
 				5EB628A026EC122B009AE8FD /* SceneDelegate.swift */,
-				5EB628A226EC122B009AE8FD /* ViewController.swift */,
 				5EB628A726EC122E009AE8FD /* Assets.xcassets */,
 				5EB628A926EC122E009AE8FD /* LaunchScreen.storyboard */,
 				5EB628AC26EC122E009AE8FD /* Info.plist */,
@@ -327,7 +324,6 @@
 			files = (
 				5EB628D626EC14A7009AE8FD /* ComicListView.swift in Sources */,
 				5EB628DA26EC1F7D009AE8FD /* Comic.swift in Sources */,
-				5EB628A326EC122B009AE8FD /* ViewController.swift in Sources */,
 				5EB628E226EC328E009AE8FD /* MarvelAPI.swift in Sources */,
 				5EB628D826EC1BD5009AE8FD /* ComicListViewModel.swift in Sources */,
 				5EB6289F26EC122B009AE8FD /* AppDelegate.swift in Sources */,
