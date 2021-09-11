@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ComicCell: UITableViewCell {
     
@@ -13,11 +14,13 @@ class ComicCell: UITableViewCell {
     
     private lazy var comicImage: UIImageView = {
         let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
         return iv
     }()
     
     private lazy var comicName: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         return label
     }()
     
@@ -50,12 +53,21 @@ class ComicCell: UITableViewCell {
         NSLayoutConstraint.activate([
             comicName.centerYAnchor.constraint(equalTo: comicImage.centerYAnchor),
             comicName.leadingAnchor.constraint(equalTo: comicImage.trailingAnchor, constant: 10),
-            comicName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            comicName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            comicName.topAnchor.constraint(lessThanOrEqualTo: contentView.topAnchor, constant: 5),
+            comicName.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -5)
         ])
     }
     
     func updateUI(withComic comic: Comic) {
         comicName.text = comic.title
+        guard let thumbnail = comic.thumbnail?.path,
+              let thumbnailExtension = comic.thumbnail?.thumbnailExtension,
+              let thumbnailURL = URL(string: "\(thumbnail).\(thumbnailExtension)")
+            else {
+            return
+        }
+        comicImage.sd_setImage(with: thumbnailURL)
     }
     
 }
