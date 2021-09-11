@@ -16,7 +16,7 @@ class ComicListView: UIViewController {
         
     var isLoadingCancellable: AnyCancellable?
     
-    var table: UITableView = {
+    private lazy var table: UITableView = {
         let table = UITableView()
         table.separatorStyle = .none
         return table
@@ -35,9 +35,11 @@ class ComicListView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.requestComics()
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setupUI() {
+        title = "Marvelous"
         view.backgroundColor = .systemBackground
         view.addSubview(table)
     }
@@ -46,8 +48,8 @@ class ComicListView: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             table.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            table.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            table.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            table.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            table.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             table.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
