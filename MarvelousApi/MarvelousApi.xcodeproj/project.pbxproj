@@ -145,6 +145,10 @@
 		5EB6289D26EC122B009AE8FD /* MarvelousApi */ = {
 			isa = PBXGroup;
 			children = (
+				5E8319AD26ED67F700374725 /* Common */,
+				5E8319AC26ED67F000374725 /* Extensions */,
+				5E8319B326ED69CF00374725 /* Coordinator */,
+				5EB628E026EC3276009AE8FD /* Services */,
 				5EB628CE26EC13F9009AE8FD /* MarvelousApi */,
 				5EB6289E26EC122B009AE8FD /* AppDelegate.swift */,
 				5EB628A026EC122B009AE8FD /* SceneDelegate.swift */,
@@ -176,10 +180,6 @@
 		5EB628CE26EC13F9009AE8FD /* MarvelousApi */ = {
 			isa = PBXGroup;
 			children = (
-				5E8319B326ED69CF00374725 /* Coordinator */,
-				5E8319AD26ED67F700374725 /* Common */,
-				5E8319AC26ED67F000374725 /* Extensions */,
-				5EB628E026EC3276009AE8FD /* Services */,
 				5EB628CF26EC140F009AE8FD /* ComicList */,
 			);
 			path = MarvelousApi;
