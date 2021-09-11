@@ -10,6 +10,8 @@ import Combine
 
 class ComicListView: UIViewController {
     
+    var coordinator: MainCoordinator?
+    
     var viewModel = ComicListViewModel()
     
     var comicsCancellable: AnyCancellable?
