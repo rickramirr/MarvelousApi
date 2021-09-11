@@ -18,6 +18,7 @@
 		5EB628D826EC1BD5009AE8FD /* ComicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628D726EC1BD5009AE8FD /* ComicListViewModel.swift */; };
 		5EB628DA26EC1F7D009AE8FD /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628D926EC1F7D009AE8FD /* Comic.swift */; };
 		5EB628DC26EC25B3009AE8FD /* ComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628DB26EC25B3009AE8FD /* ComicCell.swift */; };
+		5EB628E226EC328E009AE8FD /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628E126EC328E009AE8FD /* MarvelAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		5EB628D726EC1BD5009AE8FD /* ComicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListViewModel.swift; sourceTree = "<group>"; };
 		5EB628D926EC1F7D009AE8FD /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		5EB628DB26EC25B3009AE8FD /* ComicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCell.swift; sourceTree = "<group>"; };
+		5EB628E126EC328E009AE8FD /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		5EB628CE26EC13F9009AE8FD /* MarvelousApi */ = {
 			isa = PBXGroup;
 			children = (
+				5EB628E026EC3276009AE8FD /* Services */,
 				5EB628CF26EC140F009AE8FD /* ComicList */,
 			);
 			path = MarvelousApi;
@@ -175,6 +178,14 @@
 				5EB628D926EC1F7D009AE8FD /* Comic.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5EB628E026EC3276009AE8FD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5EB628E126EC328E009AE8FD /* MarvelAPI.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 				5EB628D626EC14A7009AE8FD /* ComicListView.swift in Sources */,
 				5EB628DA26EC1F7D009AE8FD /* Comic.swift in Sources */,
 				5EB628A326EC122B009AE8FD /* ViewController.swift in Sources */,
+				5EB628E226EC328E009AE8FD /* MarvelAPI.swift in Sources */,
 				5EB628D826EC1BD5009AE8FD /* ComicListViewModel.swift in Sources */,
 				5EB6289F26EC122B009AE8FD /* AppDelegate.swift in Sources */,
 				5EB628A126EC122B009AE8FD /* SceneDelegate.swift in Sources */,
