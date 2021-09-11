@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CryptoKit
 
 protocol ComicProvider {
     func getComics(withOffset offset: Int?, completion: @escaping (ComicsResponse) -> Void)
@@ -15,13 +16,20 @@ protocol ComicProvider {
 class MarvelAPI: ComicProvider {
     
     let baseURL = "https://gateway.marvel.com"
-    let apiKey = "YOUR_API_KEY"
+    let publicKey = "YOUR_API_KEY"
+    let privateKey = "YOUR_API_KEY"
         
     var cancellable: AnyCancellable?
     
     func getComics(withOffset offset: Int?, completion: @escaping (ComicsResponse) -> Void) {
         var urlComponents = URLComponents(string: "\(baseURL)/v1/public/comics")
-        var queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
+        let ts = String(Date().timeIntervalSince1970)
+        let hash = generateHash(withTimestamp: ts)
+        var queryItems = [
+            URLQueryItem(name: "apikey", value: publicKey),
+            URLQueryItem(name: "ts", value: ts),
+            URLQueryItem(name: "hash", value: hash),
+        ]
         if let offset = offset {
             queryItems.append(URLQueryItem(name: "offset", value: String(offset)))
         }
@@ -38,6 +46,13 @@ class MarvelAPI: ComicProvider {
             }, receiveValue: { data in
                 completion(data)
             })
+    }
+    
+    private func generateHash(withTimestamp ts: String) -> String {
+        let digest = CryptoKit.Insecure.MD5.hash(data: "\(ts)\(privateKey)\(publicKey)".data(using: .utf8) ?? Data())
+        return digest.map {
+            String(format: "%02hhx", $0)
+        }.joined()
     }
     
 }
