@@ -18,6 +18,10 @@ class ComicListView: UIViewController {
     
     private var dataSource: UITableViewDiffableDataSource<ComicSection,Comic>?
     
+    var comicsCancellable: AnyCancellable?
+        
+    var isLoadingCancellable: AnyCancellable?
+    
     private lazy var table: UITableView = {
         let table = UITableView()
         return table
@@ -27,10 +31,13 @@ class ComicListView: UIViewController {
         super.loadView()
         setupUI()
         activateConstraints()
+        configureTable()
+        configureObservers()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.requestComics()
     }
     
     private func setupUI() {
@@ -56,11 +63,28 @@ class ComicListView: UIViewController {
         table.register(ComicCell.self, forCellReuseIdentifier: ComicCell.cellIdentifier)
     }
     
+    private func configureObservers() {
+        comicsCancellable = viewModel.$comics
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] comics in
+                self?.updateUI(withComics: comics)
+            }
+        isLoadingCancellable = viewModel.$isLoading
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isLoading in
+                self?.updateUI(withIsLoading: isLoading)
+            }
+    }
+    
     func updateUI(withComics comics: [Comic]) {
         var snapshot = NSDiffableDataSourceSnapshot<ComicSection,Comic>()
         snapshot.appendSections([.all])
         snapshot.appendItems(comics)
         dataSource?.apply(snapshot)
+    }
+    
+    func updateUI(withIsLoading: Bool) {
+        
     }
     
 }

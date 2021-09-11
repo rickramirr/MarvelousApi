@@ -41,7 +41,7 @@ class ComicCell: UITableViewCell {
         NSLayoutConstraint.activate([
             comicImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             comicImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
-            comicImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            comicImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
             comicImage.widthAnchor.constraint(equalToConstant: 70),
             comicImage.heightAnchor.constraint(equalToConstant: 140)
         ])
