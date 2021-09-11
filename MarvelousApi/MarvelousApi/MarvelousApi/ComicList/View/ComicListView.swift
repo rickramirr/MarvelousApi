@@ -12,18 +12,13 @@ class ComicListView: UIViewController {
     
     var viewModel = ComicListViewModel()
     
-    private enum ComicSection: CaseIterable {
-        case all
-    }
-    
-    private var dataSource: UITableViewDiffableDataSource<ComicSection,Comic>?
-    
     var comicsCancellable: AnyCancellable?
         
     var isLoadingCancellable: AnyCancellable?
     
-    private lazy var table: UITableView = {
+    var table: UITableView = {
         let table = UITableView()
+        table.separatorStyle = .none
         return table
     }()
     
@@ -56,9 +51,7 @@ class ComicListView: UIViewController {
     }
     
     private func configureTable() {
-        let dataSource = makeDataSource()
-        self.dataSource = dataSource
-        table.dataSource = dataSource
+        table.dataSource = self
         table.delegate = self
         table.register(ComicCell.self, forCellReuseIdentifier: ComicCell.cellIdentifier)
     }
@@ -77,10 +70,7 @@ class ComicListView: UIViewController {
     }
     
     func updateUI(withComics comics: [Comic]) {
-        var snapshot = NSDiffableDataSourceSnapshot<ComicSection,Comic>()
-        snapshot.appendSections([.all])
-        snapshot.appendItems(comics)
-        dataSource?.apply(snapshot)
+        table.reloadData()
     }
     
     func updateUI(withIsLoading: Bool) {
@@ -91,16 +81,24 @@ class ComicListView: UIViewController {
 
 extension ComicListView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
+            viewModel.getComicsIfNeeded()
+        }
+    }
+    
 }
 
-private extension ComicListView {
+extension ComicListView: UITableViewDataSource {
     
-    private func makeDataSource() -> UITableViewDiffableDataSource<ComicSection,Comic> {
-        return UITableViewDiffableDataSource<ComicSection,Comic>(tableView: table) { (table, indexPath, comic) -> UITableViewCell? in
-            let cell = table.dequeueReusableCell(withIdentifier: ComicCell.cellIdentifier, for: indexPath) as? ComicCell
-            cell?.updateUI(withComic: comic)
-            return cell
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.comics.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: ComicCell.cellIdentifier, for: indexPath) as! ComicCell
+        cell.updateUI(withComic: viewModel.comics[indexPath.row])
+        return cell
     }
     
 }
