@@ -22,6 +22,8 @@ class ComicListView: UIViewController {
         return table
     }()
     
+    private lazy var loader = LoadingViewController()
+    
     override func loadView() {
         super.loadView()
         setupUI()
@@ -73,8 +75,12 @@ class ComicListView: UIViewController {
         table.reloadData()
     }
     
-    func updateUI(withIsLoading: Bool) {
-        
+    func updateUI(withIsLoading isLoading: Bool) {
+        if isLoading {
+            add(loader)
+        } else {
+            loader.remove()
+        }
     }
     
 }
