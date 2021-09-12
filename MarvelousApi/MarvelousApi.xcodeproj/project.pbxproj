@@ -11,6 +11,7 @@
 		5E8319B026ED688A00374725 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8319AF26ED688A00374725 /* UIViewController.swift */; };
 		5E8319B226ED68B700374725 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8319B126ED68B700374725 /* LoadingViewController.swift */; };
 		5E8319B526ED69E900374725 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8319B426ED69E900374725 /* MainCoordinator.swift */; };
+		5E8319B826ED6E4200374725 /* ComicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8319B726ED6E4200374725 /* ComicDetailView.swift */; };
 		5EB6289F26EC122B009AE8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6289E26EC122B009AE8FD /* AppDelegate.swift */; };
 		5EB628A126EC122B009AE8FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628A026EC122B009AE8FD /* SceneDelegate.swift */; };
 		5EB628A826EC122E009AE8FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB628A726EC122E009AE8FD /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		5E8319AF26ED688A00374725 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5E8319B126ED68B700374725 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		5E8319B426ED69E900374725 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5E8319B726ED6E4200374725 /* ComicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailView.swift; sourceTree = "<group>"; };
 		5EB6289B26EC122B009AE8FD /* MarvelousApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelousApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB6289E26EC122B009AE8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB628A026EC122B009AE8FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		5E8319B626ED6E0F00374725 /* ComicDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5E8319B726ED6E4200374725 /* ComicDetailView.swift */,
+			);
+			path = ComicDetail;
+			sourceTree = "<group>";
+		};
 		5EB6289226EC122B009AE8FD = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 		5EB628CE26EC13F9009AE8FD /* MarvelousApi */ = {
 			isa = PBXGroup;
 			children = (
+				5E8319B626ED6E0F00374725 /* ComicDetail */,
 				5EB628CF26EC140F009AE8FD /* ComicList */,
 			);
 			path = MarvelousApi;
@@ -372,6 +383,7 @@
 				5E8319B226ED68B700374725 /* LoadingViewController.swift in Sources */,
 				5EB628A126EC122B009AE8FD /* SceneDelegate.swift in Sources */,
 				5E8319B026ED688A00374725 /* UIViewController.swift in Sources */,
+				5E8319B826ED6E4200374725 /* ComicDetailView.swift in Sources */,
 				5EB628DC26EC25B3009AE8FD /* ComicCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
