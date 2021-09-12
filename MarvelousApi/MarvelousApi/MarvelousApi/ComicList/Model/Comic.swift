@@ -13,7 +13,7 @@ struct Comic: Codable, Hashable {
     let title: String?
     let issueNumber: Int?
     let variantDescription: String?
-    let resultDescription: String?
+    let description: String?
     let modified: String?
     let isbn: String?
     let upc :String?
