@@ -97,6 +97,10 @@ extension ComicListView: UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.viewComicDetail(viewModel.comics[indexPath.row])
+    }
+    
 }
 
 extension ComicListView: UITableViewDataSource {

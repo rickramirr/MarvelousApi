@@ -29,4 +29,11 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
+    func viewComicDetail(_ comic: Comic) {
+        let vc = ComicDetailView()
+        vc.coordinator = self
+        vc.updateUI(withComic: comic)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
 }
