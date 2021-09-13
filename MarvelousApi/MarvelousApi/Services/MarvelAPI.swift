@@ -58,13 +58,20 @@ class MarvelAPI: ComicProvider {
 }
 
 struct ComicsResponse: Codable {
-    let code: Int
-    let status, copyright, attributionText, attributionHTML: String
-    let etag: String
-    let data: ComicsData
+    let code: Int?
+    let message: String?
+    let status: String?
+    let copyright: String?
+    let attributionText: String?
+    let attributionHTML: String?
+    let etag: String?
+    let data: ComicsData?
 }
 
 struct ComicsData: Codable {
-    let offset, limit, total, count: Int
-    let results: [Comic]
+    let offset: Int?
+    let limit: Int?
+    let total: Int?
+    let count: Int?
+    let results: [Comic]?
 }
