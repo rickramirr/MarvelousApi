@@ -18,6 +18,8 @@ class ComicListView: UIViewController {
         
     var isLoadingCancellable: AnyCancellable?
     
+    var errorCancellable: AnyCancellable?
+    
     private lazy var table: UITableView = {
         let table = UITableView()
         table.separatorStyle = .none
@@ -73,6 +75,14 @@ class ComicListView: UIViewController {
             .sink { [weak self] isLoading in
                 self?.updateUI(withIsLoading: isLoading)
             }
+        errorCancellable = viewModel.$error
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] error in
+                guard let error = error else {
+                    return
+                }
+                self?.updateUI(withError: error)
+            }
     }
     
     func updateUI(withComics comics: [Comic]) {
@@ -87,6 +97,14 @@ class ComicListView: UIViewController {
         }
     }
     
+    func updateUI(withError error: String) {
+        coordinator?.showSimpleAlert(
+            withTitle: "Error",
+            message: "Something happened. Error: \(error)",
+            actionTitle: "Ok"
+        )
+    }
+    
 }
 
 extension ComicListView: UITableViewDelegate {
@@ -98,7 +116,7 @@ extension ComicListView: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.viewComicDetail(viewModel.comics[indexPath.row])
+        coordinator?.showComicDetail(viewModel.comics[indexPath.row])
     }
     
 }

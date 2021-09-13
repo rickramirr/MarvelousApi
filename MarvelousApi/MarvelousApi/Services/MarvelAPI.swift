@@ -21,7 +21,7 @@ class MarvelAPI: ComicService {
         
     var cancellable: AnyCancellable?
     
-    func getComics(withOffset offset: Int?, completion: @escaping (ComicsResponse) -> Void) {
+    func getComics(withOffset offset: Int?, completion: @escaping (ComicsResponse?, Error?) -> Void) {
         var urlComponents = URLComponents(string: "\(baseURL)/v1/public/comics")
         let ts = String(Date().timeIntervalSince1970)
         let hash = generateHash(withTimestamp: ts)
@@ -41,10 +41,15 @@ class MarvelAPI: ComicService {
             .retry(1)
             .map { $0.data }
             .decode(type: ComicsResponse.self, decoder: JSONDecoder())
-            .sink(receiveCompletion: { error in
-                print(error)
+            .sink(receiveCompletion: { receiveCompletion in
+                switch receiveCompletion {
+                case .failure(let error):
+                    completion(nil, error)
+                case .finished:
+                    break
+                }
             }, receiveValue: { data in
-                completion(data)
+                completion(data, nil)
             })
     }
     

@@ -16,6 +16,8 @@ class ComicListViewModel {
     
     @Published var isLoading = false
     
+    @Published var error: String? = nil
+    
     var total: Int = 0
     
     init(comicProvider: ComicService = MarvelAPI()) {
@@ -33,9 +35,19 @@ class ComicListViewModel {
     
     func requestComics() {
         isLoading = true
-        comicProvider.getComics(withOffset: comics.count) { response in
-            self.comics.append(contentsOf: response.data.results)
-            self.total = response.data.total
+        comicProvider.getComics(withOffset: comics.count) { data, error  in
+            if let error = error {
+                self.error = error.localizedDescription
+                self.isLoading = false
+                return
+            }
+            guard let comics = data?.data?.results,
+                  let total = data?.data?.total
+                else {
+                return
+            }
+            self.comics.append(contentsOf: comics)
+            self.total = total
             self.isLoading = false
         }
     }

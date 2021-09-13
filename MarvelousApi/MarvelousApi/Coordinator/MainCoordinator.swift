@@ -29,11 +29,31 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func viewComicDetail(_ comic: Comic) {
+    func showComicDetail(_ comic: Comic) {
         let vc = ComicDetailView()
         vc.coordinator = self
         vc.updateUI(withComic: comic)
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showSimpleAlert(withTitle title: String, message: String, actionTitle: String, actionCompletion: (() -> Void)? = nil) {
+        let vc = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        vc.addAction(
+            UIAlertAction(
+                title: actionTitle,
+                style: .default,
+                handler: { action in
+                    if let completion = actionCompletion {
+                        completion()
+                    }
+                }
+            )
+        )
+        navigationController.present(vc, animated: true, completion: nil)
     }
     
 }
