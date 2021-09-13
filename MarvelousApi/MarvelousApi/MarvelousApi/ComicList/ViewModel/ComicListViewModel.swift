@@ -10,7 +10,7 @@ import Combine
 
 class ComicListViewModel {
     
-    let comicProvider: ComicProvider
+    let comicProvider: ComicService
     
     @Published var comics = [Comic]()
     
@@ -18,7 +18,7 @@ class ComicListViewModel {
     
     var total: Int = 0
     
-    init(comicProvider: ComicProvider = MarvelAPI()) {
+    init(comicProvider: ComicService = MarvelAPI()) {
         self.comicProvider = comicProvider
     }
     

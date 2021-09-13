@@ -9,11 +9,11 @@ import Foundation
 import Combine
 import CryptoKit
 
-protocol ComicProvider {
-    func getComics(withOffset offset: Int?, completion: @escaping (ComicsResponse) -> Void)
+protocol ComicService {
+    func getComics(withOffset offset: Int?, completion: @escaping (ComicsResponse?, Error?) -> Void)
 }
 
-class MarvelAPI: ComicProvider {
+class MarvelAPI: ComicService {
     
     let baseURL = "https://gateway.marvel.com"
     let publicKey = "YOUR_API_KEY"
