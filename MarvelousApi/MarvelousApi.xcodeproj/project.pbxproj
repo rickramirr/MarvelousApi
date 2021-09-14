@@ -16,24 +16,16 @@
 		5EB628A126EC122B009AE8FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628A026EC122B009AE8FD /* SceneDelegate.swift */; };
 		5EB628A826EC122E009AE8FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB628A726EC122E009AE8FD /* Assets.xcassets */; };
 		5EB628AB26EC122E009AE8FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB628A926EC122E009AE8FD /* LaunchScreen.storyboard */; };
-		5EB628B626EC122F009AE8FD /* MarvelousApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628B526EC122F009AE8FD /* MarvelousApiTests.swift */; };
-		5EB628C126EC122F009AE8FD /* MarvelousApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628C026EC122F009AE8FD /* MarvelousApiUITests.swift */; };
 		5EB628D626EC14A7009AE8FD /* ComicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628D526EC14A7009AE8FD /* ComicListView.swift */; };
 		5EB628D826EC1BD5009AE8FD /* ComicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628D726EC1BD5009AE8FD /* ComicListViewModel.swift */; };
 		5EB628DA26EC1F7D009AE8FD /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628D926EC1F7D009AE8FD /* Comic.swift */; };
 		5EB628DC26EC25B3009AE8FD /* ComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628DB26EC25B3009AE8FD /* ComicCell.swift */; };
 		5EB628E226EC328E009AE8FD /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB628E126EC328E009AE8FD /* MarvelAPI.swift */; };
+		5EFD2CF526F0183000719C0D /* ComicListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD2CF426F0183000719C0D /* ComicListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		5EB628B226EC122F009AE8FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5EB6289326EC122B009AE8FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EB6289A26EC122B009AE8FD;
-			remoteInfo = MarvelousApi;
-		};
-		5EB628BD26EC122F009AE8FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5EB6289326EC122B009AE8FD /* Project object */;
 			proxyType = 1;
@@ -54,16 +46,13 @@
 		5EB628AA26EC122E009AE8FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EB628AC26EC122E009AE8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EB628B126EC122F009AE8FD /* MarvelousApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EB628B526EC122F009AE8FD /* MarvelousApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelousApiTests.swift; sourceTree = "<group>"; };
 		5EB628B726EC122F009AE8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EB628BC26EC122F009AE8FD /* MarvelousApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EB628C026EC122F009AE8FD /* MarvelousApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelousApiUITests.swift; sourceTree = "<group>"; };
-		5EB628C226EC122F009AE8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EB628D526EC14A7009AE8FD /* ComicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListView.swift; sourceTree = "<group>"; };
 		5EB628D726EC1BD5009AE8FD /* ComicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListViewModel.swift; sourceTree = "<group>"; };
 		5EB628D926EC1F7D009AE8FD /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		5EB628DB26EC25B3009AE8FD /* ComicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCell.swift; sourceTree = "<group>"; };
 		5EB628E126EC328E009AE8FD /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
+		5EFD2CF426F0183000719C0D /* ComicListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +65,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5EB628AE26EC122F009AE8FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EB628B926EC122F009AE8FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,7 +119,6 @@
 			children = (
 				5EB6289D26EC122B009AE8FD /* MarvelousApi */,
 				5EB628B426EC122F009AE8FD /* MarvelousApiTests */,
-				5EB628BF26EC122F009AE8FD /* MarvelousApiUITests */,
 				5EB6289C26EC122B009AE8FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,7 +128,6 @@
 			children = (
 				5EB6289B26EC122B009AE8FD /* MarvelousApi.app */,
 				5EB628B126EC122F009AE8FD /* MarvelousApiTests.xctest */,
-				5EB628BC26EC122F009AE8FD /* MarvelousApiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,19 +152,10 @@
 		5EB628B426EC122F009AE8FD /* MarvelousApiTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EB628B526EC122F009AE8FD /* MarvelousApiTests.swift */,
 				5EB628B726EC122F009AE8FD /* Info.plist */,
+				5EFD2CF426F0183000719C0D /* ComicListViewModelTests.swift */,
 			);
 			path = MarvelousApiTests;
-			sourceTree = "<group>";
-		};
-		5EB628BF26EC122F009AE8FD /* MarvelousApiUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5EB628C026EC122F009AE8FD /* MarvelousApiUITests.swift */,
-				5EB628C226EC122F009AE8FD /* Info.plist */,
-			);
-			path = MarvelousApiUITests;
 			sourceTree = "<group>";
 		};
 		5EB628CE26EC13F9009AE8FD /* MarvelousApi */ = {
@@ -280,24 +251,6 @@
 			productReference = 5EB628B126EC122F009AE8FD /* MarvelousApiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5EB628BB26EC122F009AE8FD /* MarvelousApiUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5EB628CB26EC122F009AE8FD /* Build configuration list for PBXNativeTarget "MarvelousApiUITests" */;
-			buildPhases = (
-				5EB628B826EC122F009AE8FD /* Sources */,
-				5EB628B926EC122F009AE8FD /* Frameworks */,
-				5EB628BA26EC122F009AE8FD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5EB628BE26EC122F009AE8FD /* PBXTargetDependency */,
-			);
-			name = MarvelousApiUITests;
-			productName = MarvelousApiUITests;
-			productReference = 5EB628BC26EC122F009AE8FD /* MarvelousApiUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,10 +265,7 @@
 					};
 					5EB628B026EC122F009AE8FD = {
 						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 5EB6289A26EC122B009AE8FD;
-					};
-					5EB628BB26EC122F009AE8FD = {
-						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = 5EB6289A26EC122B009AE8FD;
 					};
 				};
@@ -338,7 +288,6 @@
 			targets = (
 				5EB6289A26EC122B009AE8FD /* MarvelousApi */,
 				5EB628B026EC122F009AE8FD /* MarvelousApiTests */,
-				5EB628BB26EC122F009AE8FD /* MarvelousApiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,13 +303,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5EB628AF26EC122F009AE8FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EB628BA26EC122F009AE8FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,15 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EB628B626EC122F009AE8FD /* MarvelousApiTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5EB628B826EC122F009AE8FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5EB628C126EC122F009AE8FD /* MarvelousApiUITests.swift in Sources */,
+				5EFD2CF526F0183000719C0D /* ComicListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,11 +345,6 @@
 			isa = PBXTargetDependency;
 			target = 5EB6289A26EC122B009AE8FD /* MarvelousApi */;
 			targetProxy = 5EB628B226EC122F009AE8FD /* PBXContainerItemProxy */;
-		};
-		5EB628BE26EC122F009AE8FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EB6289A26EC122B009AE8FD /* MarvelousApi */;
-			targetProxy = 5EB628BD26EC122F009AE8FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -588,6 +517,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MarvelousApiTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -598,6 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rickramirr.MarvelousApiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelousApi.app/MarvelousApi";
@@ -609,6 +540,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MarvelousApiTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -622,44 +554,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelousApi.app/MarvelousApi";
-			};
-			name = Release;
-		};
-		5EB628CC26EC122F009AE8FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MarvelousApiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = rickramirr.MarvelousApiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MarvelousApi;
-			};
-			name = Debug;
-		};
-		5EB628CD26EC122F009AE8FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MarvelousApiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = rickramirr.MarvelousApiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MarvelousApi;
 			};
 			name = Release;
 		};
@@ -689,15 +583,6 @@
 			buildConfigurations = (
 				5EB628C926EC122F009AE8FD /* Debug */,
 				5EB628CA26EC122F009AE8FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5EB628CB26EC122F009AE8FD /* Build configuration list for PBXNativeTarget "MarvelousApiUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5EB628CC26EC122F009AE8FD /* Debug */,
-				5EB628CD26EC122F009AE8FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
