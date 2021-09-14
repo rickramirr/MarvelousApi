@@ -36,9 +36,9 @@ class ComicListViewModel {
     func requestComics() {
         isLoading = true
         comicProvider.getComics(withOffset: comics.count) { data, error  in
+            self.isLoading = false
             if let error = error {
                 self.error = error.localizedDescription
-                self.isLoading = false
                 return
             }
             guard let comics = data?.data?.results,
@@ -48,7 +48,6 @@ class ComicListViewModel {
             }
             self.comics.append(contentsOf: comics)
             self.total = total
-            self.isLoading = false
         }
     }
     
